@@ -33,7 +33,7 @@ const Center = () => {
     spotifyApi
       .getPlaylist(playlistId)
       .then((data) => {
-        setPlaylist(data.body)
+        setPlaylist(data?.body)
         nProgress.done()
       })
       .catch((error) => {
